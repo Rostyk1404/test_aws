@@ -1,5 +1,5 @@
 from aws_helper.interfaces.aws_file_interface import AwsFileInterface
-from aws_helper.v2.base_client import Client
+from aws_helper.AWS_S3.v2.base_client import Client
 
 
 class AWSBucket(AwsFileInterface, Client):

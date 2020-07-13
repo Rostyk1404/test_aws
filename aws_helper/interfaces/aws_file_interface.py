@@ -9,9 +9,10 @@ class AwsFileInterface(ABC):
 
     @classmethod
     @abstractmethod
-    def download_file(cls, credentials: tuple,  bucket_name: str, source: str, file_path=None):
+    def download_file(cls, credentials: tuple, bucket_name: str, source: str, file_path=None):
         pass
 
+    @classmethod
     @abstractmethod
-    def delete_file(self, credentials: tuple, file_name: str):
+    def delete_file(cls, credentials: tuple, bucket_name: str, file_name: str):
         pass

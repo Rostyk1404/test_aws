@@ -50,14 +50,6 @@ class DeleteBucketsFoldersAndFiles(Client):
         bucket = self.get_resource()
         bucket.objects.filter(Prefix=self.folder_name).delete()
 
-    #
-
-    # def run(self):
-    #     if not hasattr(self, 'folder_name'):
-    #         self.delete_folder_and_file_recursively()
-    #     elif not hasattr(self, 'folder_name', "file_name"):
-    #         self.delete_file()
-
 
 if __name__ == "__main__":
     obj = DeleteBucketsFoldersAndFiles("test-bucket-name-ross-aws", "docker.txt")
