@@ -1,3 +1,10 @@
 /venv
 /.idea
 /aws_helper/aws.conf
+interfaces/__pycache__/aws_folder_interface.cpython-38.pyc
+interfaces/__pycache__/aws_file_interface.cpython-38.pyc
+aws_helper/aws_s3_helper/__pycache__/
+aws_helper/aws_s3_helper/v2/
+tests.py
+trial.py
+docs_for_aws_services

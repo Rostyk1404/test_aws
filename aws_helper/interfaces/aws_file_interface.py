@@ -14,5 +14,5 @@ class AwsFileInterface(ABC):
 
     @classmethod
     @abstractmethod
-    def delete_file(cls, credentials: tuple, bucket_name: str, file_name: str):
+    def delete_file(cls, credentials: tuple, bucket_name: str, file_name: str, folder_name:str = None):
         pass

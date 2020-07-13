@@ -1,7 +1,7 @@
 import os
 from typing import Iterable
 from aws_helper.interfaces.aws_file_interface import AwsFileInterface
-from aws_helper.AWS_S3.v2.base_client import Client
+from aws_helper.aws_s3_helper.v2.base_client import Client
 from configparser import ConfigParser
 
 conf_file = ConfigParser()
@@ -39,11 +39,13 @@ class AWSFile(AwsFileInterface, Client):
         cls.get_client(*credentials).download_file(bucket_name, source, full_path)
 
     @classmethod
-    def delete_file(cls, credentials: tuple, bucket_name: str, file_path: str):
+    def delete_file(cls, credentials: tuple, bucket_name: str, file_name: str, folder_name: str = None):
         """Function that delete file from AWS S3 and from inside the folder"""
-
-        cls.get_client(*credentials).delete_object(Bucket=bucket_name, Key=file_path)
-        return 204
+        if folder_name is None:
+            cls.get_client(*credentials).delete_object(Bucket=bucket_name, Key=file_name)
+        else:
+            cls.get_client(*credentials).delete_object(Bucket=bucket_name, Key=file_name, folder_name=folder_name)
+        return "File successfully deleted", 204
 
 #
 # if __name__ == "__main__":
