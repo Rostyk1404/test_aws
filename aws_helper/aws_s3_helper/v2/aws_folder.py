@@ -1,4 +1,4 @@
-from aws_helper.interfaces.aws_folder_interface import AwsFolderInterface
+from aws_helper.aws_s3_helper.interfaces import AwsFolderInterface
 from aws_helper.aws_s3_helper.v2.base_client import Client
 from configparser import ConfigParser
 

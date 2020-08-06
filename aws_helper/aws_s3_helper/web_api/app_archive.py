@@ -1,9 +1,9 @@
 from flask import Flask
 from flask_restful import Resource, Api
-from aws_helper.v1_args.download_file_from_aws import DownloadFile
-from aws_helper.v1_args.create_bucket_aws import CreateNewBucket
-from aws_helper.v1_args.upload_file_to_aws import UploadToAws
-from aws_helper.v1_args.delete_buckets_aws import DeleteBucketsFoldersAndFiles
+from aws_helper.aws_s3_helper.v1_args import DownloadFile
+from aws_helper.aws_s3_helper.v1_args import CreateNewBucket
+from aws_helper.aws_s3_helper.v1_args import UploadToAws
+from aws_helper.aws_s3_helper.v1_args import DeleteBucketsFoldersAndFiles
 
 app = Flask(__name__)
 api = Api(app)

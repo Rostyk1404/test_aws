@@ -1,6 +1,6 @@
 import os
 from typing import Iterable
-from aws_helper.interfaces.aws_file_interface import AwsFileInterface
+from aws_helper.aws_s3_helper.interfaces.aws_file_interface import AwsFileInterface
 from aws_helper.aws_s3_helper.v2.base_client import Client
 from configparser import ConfigParser
 
